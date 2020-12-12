@@ -12,6 +12,6 @@ export default {
 
   // API
   apiBaseUrl: isDevEnv
-    ? 'http://localhost:4000/api'
-    : 'https://bitfinex.com:4000/api',
+    ? 'wss://api-pub.bitfinex.com/ws/2'
+    : 'wss://api-pub.bitfinex.com/ws/2',
 };

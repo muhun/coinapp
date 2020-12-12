@@ -10,6 +10,7 @@ import {Card, Title, Paragraph} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
 import useWebSocket from 'react-use-websocket';
 import {DataTable} from 'react-native-paper';
+import Config from '../../constant/config';
 
 const styles = StyleSheet.create({
   container: {
@@ -40,7 +41,7 @@ function OrderScreen({navigation}) {
   const orders = useSelector((state) => state.message.orders);
   const dispatch = useDispatch();
   const {sendMessage, lastMessage} = useWebSocket(
-    'wss://api-pub.bitfinex.com/ws/2',
+    Config.apiBaseUrl
   );
 
   useEffect(() => {
